@@ -9,5 +9,5 @@ docker-compose up
 
 ## Dash url
 ```
-http:localhost:8080
+http://localhost:8080
 ```
