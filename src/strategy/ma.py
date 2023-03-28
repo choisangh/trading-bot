@@ -32,7 +32,7 @@ class MaPare(Strategy):
         :param price_queue: 가격 데이터 queue
         :return:
         """
-        print(f"{price_queue[-1]}")
+        # print(f"{price_queue[-1]}")
         # queue에 충분한 데이터가 있을 경우에만 계산
         if len(price_queue) >= self.long_term:
             short_term_ma = price_queue[(-1 * self.short_term):].mean()
