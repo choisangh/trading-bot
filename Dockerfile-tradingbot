@@ -18,4 +18,4 @@ COPY src /www/src
 COPY main.py /www
 COPY app.py /www
 
-CMD ["python", "main.py", "&", "python", "app.py"]
+CMD ["sh", "-c", "python main.py & python app.py"]
