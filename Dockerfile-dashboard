@@ -1,0 +1,21 @@
+# python 환경
+FROM python:3.8
+# 그냥 라벨. 큰 의미 없음.
+MAINTAINER test
+
+WORKDIR /www
+
+# 시간 동기화
+
+RUN ln -snf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+RUN echo Asia/Seoul > /etc/timezone
+
+COPY requirements.txt /www/requirements.txt
+RUN pip install -r requirements.txt
+
+
+COPY src /www/src
+COPY main.py /www
+COPY app.py /www
+
+CMD ["python", "main.py", "&", "python", "app.py"]
