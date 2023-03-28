@@ -1,10 +1,8 @@
 version: '3.0'
 services:
-  chart-worker-60-1:
+  tradingbot:
     build:
-      dockerfile: Dockerfile-chart-worker-60-1
+      dockerfile: Dockerfile-tradingbot
       context: .
-    environment:
-      GIT_BRANCH : ${GIT_BRANCH}
     network_mode: "host"
     restart: always
